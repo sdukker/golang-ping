@@ -22,4 +22,4 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags '-w -
 FROM alpine
 COPY --from=build /usr/src/build/build /
 
-CMD ["/usr/src/build/build"]
+CMD ["/build"]
