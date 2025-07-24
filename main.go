@@ -33,7 +33,7 @@ func handlerHealth(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/pong", handlerPong)
-	http.HandleFunc("/health", handlerHealth)
+	http.HandleFunc("/health2", handlerHealth)
 
 	port := ":" + os.Getenv("PORT")
 	fmt.Printf("pong listening on 0.0.0.0, port %s\n", port)
