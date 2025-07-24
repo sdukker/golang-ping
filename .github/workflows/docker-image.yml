@@ -18,6 +18,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and Push
         run: |
-          IMAGE=ghcr.io/${{ github.actor }}/${{ github.repository }}:${GITHUB_REF##*/}
+          IMAGE=ghcr.io/${{ github.repository }}:${GITHUB_REF##*/}
           docker build -t $IMAGE -f Dockerfile .
           docker push $IMAGE
