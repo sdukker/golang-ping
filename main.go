@@ -19,7 +19,7 @@ func handlerPing(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fmt.Printf("client: status code: %d\n", res.StatusCode)
-	if res.StatusCode == 200 {
+	if res.StatusCode != 200 {
 		fmt.Printf("Unexpected response: %s\n", err)
 		os.Exit(1)
 	}
